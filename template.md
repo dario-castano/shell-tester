@@ -2,16 +2,17 @@
 
 Goal.
 
-###  usage:
+### Usage:
+
 ### Notes:
-- note 1.
-- note 2.
+- Note 1.
+- Note 2.
 
-### Expected return 
-- return.
+### Expected return:
+- Return.
 
-### expected output:
-- output.
+### Expected output:
+- Output.
 
 
 ### Example:
@@ -21,9 +22,9 @@ Code snippet.
 ```
 
 ### In this case, simple shell should be:
-- success or fail.
+- Success or fail.
 
 ### In this case, bin/sh should be:
-- succes or fail.
+- Succes or fail.
 
 
