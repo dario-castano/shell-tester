@@ -3,17 +3,18 @@
 Exits the shell.
 
 ### Usage:
-exit status, where status is an integer used to exit the shell.
+`exit status` 
+- where status is an integer used to exit the shell.
 
 ### Notes:
 - handle arguments for the built-in exit
-
+- bin/sh fails because it doesn't allow parameters
 
 ### Expected return:
-- Void.
+- Exit status code
 
 ### Expected output:
-- None (The shell exits).
+- None (The shell exits)
 
 
 ### Example:
@@ -32,6 +33,6 @@ thomas@ubuntuhpEnvy:~/shell$
 
 ### In this case, bin/sh should be:
 - Without arguments should be succes.
-- With arguments should fails.
+- With arguments should fail.
 
 
