@@ -68,7 +68,7 @@ if [ -f "$HSHELL"];
 then
     echo "HSHELL=\"$HSHELL\"" >> config
 else
-    echo "ERROR: Betty not found"
+    echo "ERROR: Shell executable not found"
 fi
 
 # Prompt for BETTY
