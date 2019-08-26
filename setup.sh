@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 ##################################
 # HOLBERTON'S SHELL-TESTER SETUP #
