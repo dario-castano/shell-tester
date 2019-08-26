@@ -1,0 +1,20 @@
+# Configuration file
+
+R=$RANDOM
+OUTPUTFILE="checker_output_$R"
+ERROROUTPUTFILE="checker_error_output_$R"
+SHELL="/bin/sh"
+SLEEP=`which sleep`
+SLEEPSECONDS=1
+ECHO=`which echo`
+CAT=`which cat`
+GREP=`which grep`
+WC=`which wc`
+RM=`which rm`
+TOUCH=`which touch`
+CHMOD=`which chmod`
+EXPECT="/usr/bin/expect"
+LTRACE="/usr/bin/ltrace"
+TESTDIR="./tests/"
+HSHELL="/home/dario/Documents/GitHub/simple_shell/build/hsh"
+PROJECTDIR="/home/dario/Documents/GitHub/simple_shell"
