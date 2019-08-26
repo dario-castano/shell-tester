@@ -65,4 +65,9 @@ echo "Please type here the absolute path of your shell executable:"
 read HSHELL
 echo "HSHELL=\"$HSHELL\"" >> config
 
+# Install jp2a
+echo "Installing jp2a..."
+sudo apt install -y jp2a
+
 echo "DONE."
+echo "You can run the checker with ./runchecker"

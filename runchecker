@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Performing checks on the Holberton School "simple shell" project
-
+                   
 #######################################
 # Print KO, in red, followed by a new line
 # Globals:
@@ -13,7 +13,7 @@
 #######################################
 function print_ko()
 {
-    echo -e "[\033[31mKO\033[37m]"
+    echo -e "[\033[31mFAIL\033[37m]"
 }
 
 #######################################
@@ -27,7 +27,7 @@ function print_ko()
 #######################################
 function print_ok()
 {
-    echo -e "[\033[32mOK\033[37m]"
+    echo -e "[\033[32mPASS\033[37m]"
 }
 
 #######################################
@@ -57,10 +57,15 @@ source config
 echo -ne "\033[37m"
 rm -f $OUTPUTFILE $LTRACEOUTPUTFILE
 
+jp2a --width=48 --colors shmg
+echo "################################################"
+echo "####       Holberton's shell-tester         ####"
+echo "################################################"
+
 # Locates all tests and launch them
 for dir in `ls -d "$TESTDIR"/*/`
 do
-    echo -e "\e[34m--> CHECKS INSIDE $dir <--\e[37m"
+    echo -e "\e[34m>>>>>>>>>>>> TESTS INSIDE $dir <<<<<<<<<<<<\e[37m"
     for testname in `ls "$dir" | grep ".bash"`
     do
 	   echo -n "   # $testname: "
