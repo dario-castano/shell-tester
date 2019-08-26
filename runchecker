@@ -70,7 +70,7 @@ let TESTS_FAILED=0
 for dir in `ls -d "$TESTDIR"/*/`
 do
     echo ""
-    echo -e "\e[34m>>>>>>>>>>>> TESTS INSIDE $dir <<<<<<<<<<<<\e[37m"
+    echo -e "\e[34m>>>>>>>>>> TESTS INSIDE $dir <<<<<<<<<<\e[37m"
     echo ""
     for testname in `ls "$dir" | grep ".bash"`
     do
