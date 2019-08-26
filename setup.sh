@@ -64,7 +64,7 @@ echo "PROJECTDIR=\"$PROJECTDIR\"" >> config
 # Prompt for HSHELL
 echo "Please type here the absolute path of your shell executable:"
 read HSHELL
-if [ -f "$HSHELL"];
+if [ -f "$HSHELL" ];
 then
     echo "HSHELL=\"$HSHELL\"" >> config
 else
@@ -74,7 +74,7 @@ fi
 # Prompt for BETTY
 echo "Please type here the absolute path of your betty executable:"
 read BETTY
-if [ -f "$BETTY"];
+if [ -f "$BETTY" ];
 then
     echo "BETTY=\"$BETTY\"" >> config
 else
