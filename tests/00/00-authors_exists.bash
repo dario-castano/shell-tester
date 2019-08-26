@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
 # TITLE OF THE TEST
-echo "Check if README.md exists"
+echo "Check if AUTHORS exists"
 
-FILENAME="README.md"
+FILENAME="AUTHORS"
 FULLNAME="$PROJECTDIR/$FILENAME"
 
 # wait a little bit

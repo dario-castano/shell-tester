@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
 # TITLE OF THE TEST
-echo "Check if README.md exists"
+echo "Check if the MAN page exists"
 
-FILENAME="README.md"
+FILENAME="man_1_simple_shell"
 FULLNAME="$PROJECTDIR/$FILENAME"
 
 # wait a little bit
