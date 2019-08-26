@@ -9,6 +9,7 @@ sed -i '/PROJECTDIR/d' config
 sed -i '/HSHELL/d' config
 sed -i '/EXPECT/d' config
 sed -i '/LTRACE/d' config
+sed -i '/BETTY/d' config
 
 function check_installed {
     NAME=$1
@@ -63,7 +64,22 @@ echo "PROJECTDIR=\"$PROJECTDIR\"" >> config
 # Prompt for HSHELL
 echo "Please type here the absolute path of your shell executable:"
 read HSHELL
-echo "HSHELL=\"$HSHELL\"" >> config
+if [ -f "$HSHELL"];
+then
+    echo "HSHELL=\"$HSHELL\"" >> config
+else
+    echo "ERROR: Betty not found"
+fi
+
+# Prompt for BETTY
+echo "Please type here the absolute path of your betty executable:"
+read BETTY
+if [ -f "$BETTY"];
+then
+    echo "BETTY=\"$BETTY\"" >> config
+else
+    echo "ERROR: Betty not found"
+fi
 
 # Install jp2a
 echo "Installing jp2a..."

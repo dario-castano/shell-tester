@@ -62,16 +62,31 @@ echo "################################################"
 echo "####       Holberton's shell-tester         ####"
 echo "################################################"
 
+let COUNT_TESTS=0
+let TESTS_PASSED=0
+let TESTS_FAILED=0
+
 # Locates all tests and launch them
 for dir in `ls -d "$TESTDIR"/*/`
 do
+    echo ""
     echo -e "\e[34m>>>>>>>>>>>> TESTS INSIDE $dir <<<<<<<<<<<<\e[37m"
+    echo ""
     for testname in `ls "$dir" | grep ".bash"`
     do
 	   echo -n "   # $testname: "
 	   source "$dir$testname"
+       COUNT_TESTS=$((COUNT_TESTS + 1))
     done
 done
+
+echo ""
+echo ">>>>>>>>>>>>>>>>>>>> SUMMARY <<<<<<<<<<<<<<<<<<<"
+echo "TOTAL OF TESTS: $COUNT_TESTS"
+echo "TESTS PASSED: $TESTS_PASSED"
+echo "TESTS FAILED: $TESTS_FAILED"
+echo ">>>>>>>>>>>>>>>>>>>>>> END <<<<<<<<<<<<<<<<<<<<<"
+echo ""
 
 # Cleanup
 rm -f $OUTPUTFILE $LTRACEOUTPUTFILE $ERROROUTPUTFILE
