@@ -15,7 +15,7 @@ touch $tmp_file
 OLDPATH="$PATH"
 PATH=""
 # send commands
-$ECHO "$command" | $SHELL > $OUTPUTFILE 2> $ERROROUTPUTFILE &
+$ECHO "$command" | $OSHELL > $OUTPUTFILE 2> $ERROROUTPUTFILE &
 
 # put PATH back
 PATH="$OLDPATH"

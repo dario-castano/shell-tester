@@ -9,9 +9,9 @@ tmp_file2="testing_real_$RANDOM"
 # create a pseudo random file
 touch $tmp_file
 # send commands
-echo "$command" | $SHELL > $tmp_file 2>/dev/null
+echo "$command" | $HSHELL > $tmp_file 2>/dev/null
 ret_actual=$?
-echo "$command" | $HSHELL > $tmp_file2 2>/dev/null
+echo "$command" | $OSHELL > $tmp_file2 2>/dev/null
 ret_exepcted=$?
 
 # wait a little bit

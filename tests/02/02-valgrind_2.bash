@@ -1,11 +1,11 @@
 #!/bin/bash
 if [[ $valgrind_check -eq 1 ]]; then
 	trash="/dev/null"
-	#HSHELL="../../../../HolbertonRepos/bash_stuff/simple_shell/V3/h"
-	#HSHELL2="../../../../Desktop/a.out"
+	#OSHELL="../../../../HolbertonRepos/bash_stuff/simple_shell/V3/h"
+	#OSHELL2="../../../../Desktop/a.out"
 
 	# execute the prog and putting output to out file
-	valgrind --leak-check=full ./$SHELL < /bin/ls > test_ing.txt 2>&1
+	valgrind --leak-check=full ./$HSHELL < /bin/ls > test_ing.txt 2>&1
 
 
 	# cheking for patters that indicate err

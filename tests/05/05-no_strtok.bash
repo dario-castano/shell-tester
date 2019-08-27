@@ -11,7 +11,7 @@ stop_shell
 rm -f $tmp_file
 
 # send commands
-echo "$command" | $LTRACE -bc -o $LTRACEOUTPUTFILE $SHELL > $OUTPUTFILE 2> /dev/null &
+echo "$command" | $LTRACE -bc -o $LTRACEOUTPUTFILE $HSHELL > $OUTPUTFILE 2> /dev/null &
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS

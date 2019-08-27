@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##################################
-# HOLBERTON'S SHELL-TESTER SETUP #
+# HOLBERTON'S HSHELL-TESTER SETUP #
 ##################################
 
 # Delete old config
@@ -54,6 +54,11 @@ echo ""
 # Checking if ltrace is installed
 echo "Checking if ltrace is installed ..."
 check_installed "ltrace" "$(which ltrace)"
+echo ""
+
+# Checking if valgrind is installed
+echo "Checking if valgrind is installed ..."
+check_installed "valgrind" "$(which valgrind)"
 echo ""
 
 # Prompt for PROJECTDIR

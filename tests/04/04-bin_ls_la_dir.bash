@@ -15,7 +15,7 @@ rm -f $tmp_filepath
 touch $tmp_filepath
 chmod 761 $tmp_filepath
 # send commands
-echo "$command" | $SHELL > $OUTPUTFILE 2> /dev/null &
+echo "$command" | $HSHELL > $OUTPUTFILE 2> /dev/null &
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS

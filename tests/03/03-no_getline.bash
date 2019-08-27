@@ -11,7 +11,7 @@ stop_shell
 rm -f $tmp_file
 
 # send commands
-echo "$command" | $LTRACE -bc -o $LTRACEOUTPUTFILE $SHELL > $OUTPUTFILE 2> /dev/null &
+echo "$command" | $LTRACE -bc -o $LTRACEOUTPUTFILE $HSHELL > $OUTPUTFILE 2> /dev/null &
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS
@@ -20,10 +20,8 @@ $SLEEP $SLEEPSECONDS
 nmatch=`cat $LTRACEOUTPUTFILE | grep getline | wc -l`
 if [ $nmatch -eq 1 ]; then
    	   print_ko
-	   if [[ $COUNTADV -eq 1 ]]; then
-	   		k=`expr $k + 1`
-	   		l=`expr $l + 1`
-		fi
+	   TESTS_FAILED=$((TESTS_FAILED + 1))
+
 	   if [[ $SHOWERRORS -eq 1 ]]; then
 	   	echo ""
 	   	echo -e "[\033[31m************************\033[37m]"
@@ -39,7 +37,7 @@ if [ $nmatch -eq 1 ]; then
 	   fi
 else
    print_ok
-   l=`expr $l + 1`
+   TESTS_PASSED=$((TESTS_PASSED + 1))
 fi
 
 # clean up
