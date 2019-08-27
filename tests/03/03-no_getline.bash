@@ -11,8 +11,6 @@ rm -f $tmp_file
 # send commands
 echo "$command" | $LTRACE -bc -o $LTRACEOUTPUTFILE $HSHELL > $OUTPUTFILE 2> /dev/null &
 
-# wait a little bit
-$SLEEP $SLEEPSECONDS
 
 # check the result
 let nmatch=`cat $LTRACEOUTPUTFILE | grep getline | wc -l`
