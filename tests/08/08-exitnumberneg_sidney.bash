@@ -11,7 +11,7 @@ touch $tmp_file
 # send commands
 echo "$command" | $SHELL > $tmp_file 2>/dev/null
 ret_actual=$?
-echo "$command" | $TSHELL > $tmp_file2 2>/dev/null
+echo "$command" | $HSHELL > $tmp_file2 2>/dev/null
 ret_exepcted=$?
 
 # wait a little bit

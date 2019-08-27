@@ -10,7 +10,7 @@ tmp_file2="testing_real_$RANDOM"
 touch $tmp_file
 # send commands
 $SHELL $command > $tmp_file 2> /dev/null &
-$TSHELL $command > $tmp_file2 2> /dev/null &
+$HSHELL $command > $tmp_file2 2> /dev/null &
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS

@@ -1,8 +1,8 @@
 #!/bin/bash
 if [[ $valgrind_check -eq 1 ]]; then
 	trash="/dev/null"
-	#TSHELL="../../../../HolbertonRepos/bash_stuff/simple_shell/V3/h"
-	#TSHELL2="../../../../Desktop/a.out"
+	#HSHELL="../../../../HolbertonRepos/bash_stuff/simple_shell/V3/h"
+	#HSHELL2="../../../../Desktop/a.out"
 
 	# execute the prog and putting output to out file
 	valgrind --leak-check=full ./$SHELL < ls > test_ing.txt 2>&1
