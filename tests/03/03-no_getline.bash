@@ -2,9 +2,7 @@
 #
 # check if the getline function was used by using ltrace
 
-command="/bin/ls
-/bin/ls
-/bin/ls"
+command="/bin/ls"
 
 # clean up
 stop_shell
@@ -17,8 +15,8 @@ echo "$command" | $LTRACE -bc -o $LTRACEOUTPUTFILE $HSHELL > $OUTPUTFILE 2> /dev
 $SLEEP $SLEEPSECONDS
 
 # check the result
-nmatch=`cat $LTRACEOUTPUTFILE | grep getline | wc -l`
-if [ $nmatch -eq 1 ]; then
+let nmatch=`cat $LTRACEOUTPUTFILE | grep getline | wc -l`
+if [ $nmatch -ge 1 ]; then
    	   print_ko
 	   TESTS_FAILED=$((TESTS_FAILED + 1))
 

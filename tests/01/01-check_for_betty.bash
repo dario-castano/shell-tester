@@ -8,9 +8,6 @@ $CMD > /dev/null 2> tmpfile
 
 let ERRORS=`cat tmpfile | wc -l`
 
-# wait a little bit
-$SLEEP $SLEEPSECONDS
-
 if [ "$ERRORS" -eq 0 ];
 then
     print_ok
