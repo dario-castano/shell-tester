@@ -15,7 +15,7 @@ rm -f $tmp_file
 # create a pseudo random file
 touch $tmp_file
 # send commands
-echo "$command" | $OSHELL > $OUTPUTFILE 2> /dev/null &
+echo "$command" | $HSHELL > $OUTPUTFILE 2> /dev/null &
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS
@@ -29,20 +29,6 @@ if [ $nmatch -eq 4 ]; then
 else
 	   print_ko
 	   TESTS_FAILED=$((TESTS_FAILED + 1))
-	   
-	   if [[ $SHOWERRORS -eq 1 ]]; then
-	   	echo ""
-	   	echo -e "[\033[31m************************\033[37m]"
-	   	echo ">> Real output << "
-	   	cat $OUTPUTFILE
-	   	echo ">>**************<<"
-	   	echo ""
-	   	echo "> Expected output: "
-	   	echo ""
-	   	cat $tmp_file
-	   	echo ">>**************<<"
-	    echo -e "[\033[31m************************\033[37m]"
-	   fi
 fi
 
 # clean up

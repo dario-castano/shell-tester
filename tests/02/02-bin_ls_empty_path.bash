@@ -15,7 +15,7 @@ touch $tmp_file
 OLDPATH="$PATH"
 PATH=""
 # send commands
-$ECHO "$command" | $OSHELL > $OUTPUTFILE 2> $ERROROUTPUTFILE &
+$ECHO "$command" | $HSHELL > $OUTPUTFILE 2> $ERROROUTPUTFILE &
 
 # put PATH back
 PATH="$OLDPATH"
@@ -29,21 +29,10 @@ cat $ERROROUTPUTFILE
 nmatch=`$CAT $OUTPUTFILE | $GREP -c "$tmp_file"`
 if [ $nmatch -eq 1 ]; then
     print_ok
+	TESTS_PASSED=$((TESTS_PASSED + 1))
 else
     print_ko
-      if [[ $SHOWERRORS -eq 1 ]]; then
-	   	echo ""
-	   	echo -e "[\033[31m************************\033[37m]"
-	   	echo ">> Real output << "
-	   	cat $OUTPUTFILE
-	   	echo ">>**************<<"
-	   	echo ""
-	   	echo "> Expected output: "
-	   	echo ""
-	   	cat $tmp_file
-	   	echo ">>**************<<"
-	    echo -e "[\033[31m************************\033[37m]"
-	   fi
+	TESTS_FAILED=$((TESTS_FAILED + 1))
 fi
 
 # clean up
