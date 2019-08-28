@@ -3,7 +3,7 @@
 R=$RANDOM
 OUTPUTFILE="checker_output_$R"
 ERROROUTPUTFILE="checker_error_output_$R"
-SHELL="/bin/sh"
+OSHELL="/bin/sh"
 SLEEP=`which sleep`
 SLEEPSECONDS=1
 ECHO=`which echo`
