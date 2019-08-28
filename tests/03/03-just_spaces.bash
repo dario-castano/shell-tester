@@ -2,7 +2,7 @@
 #
 # check exit status after passing just spaces
 
-command="echo "       " | $HSHELL"
+command="       "
 tmp_file="testing_custom_$RANDOM"
 tmp_file2="testing_real_$RANDOM"
 
