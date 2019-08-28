@@ -44,8 +44,8 @@ function print_ok()
 #######################################
 function stop_shell()
 {
-    if [ `pidof $SHELL | wc -l` -ne 0 ]; then
-	   killall -9 $SHELL 2>&1 > /dev/null
+    if [ `pidof $HSHELL | wc -l` -ne 0 ]; then
+	   killall -9 $HSHELL 2>&1 > /dev/null
     fi
     rm -f $OUTPUTFILE $ERROROUTPUTFILE $LTRACEOUTPUTFILE
 }
