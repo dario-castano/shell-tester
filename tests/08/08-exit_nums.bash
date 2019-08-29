@@ -13,14 +13,14 @@ echo "$command" | $HSHELL > $tmp_file 2>/dev/null
 let ret_actual=$?
 echo "$ret_actual"
 echo "$command" | $OSHELL > $tmp_file2 2>/dev/null
-let ret_exepcted=$?
+let ret_expected=$?
 echo "$ret_expected"
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS
 
 # check the result
-if [[ $ret_actual -eq $ret_exepcted ]]; then
+if [[ $ret_actual -eq $ret_expected ]]; then
 	print_ok
 	TEST_PASSED=$((TEST_PASSED+1))
 else
