@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# test simple command /bin/ls
+# test simple command /bin/ls by doing it a lot of times c:
 
 command="/bin/ls
 /bin/ls
