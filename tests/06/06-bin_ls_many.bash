@@ -4,10 +4,14 @@
 
 command="/bin/ls
 /bin/ls
-ls
 /bin/ls
-ls
-ls
+/bin/ls
+/bin/ls
+/bin/ls
+/bin/ls
+/bin/ls
+/bin/ls
+
 /bin/ls"
 tmp_file="testing_tmp_file_$RANDOM"
 
@@ -22,7 +26,7 @@ $SLEEP $SLEEPSECONDS
 # check the result
 nmatch=`cat $OUTPUTFILE | grep -c "$tmp_file"`
 # check the results
-if [ $nmatch -eq 7 ]; then
+if [ $nmatch -eq 10 ]; then
 		print_ok
 		TEST_PASSED=$((TEST_PASSED + 1))
 else
